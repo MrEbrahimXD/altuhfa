@@ -10,15 +10,16 @@
 
 ## جمع البيانات
 
-**لا يجمع التطبيق أي بيانات شخصية.** التطبيق يعمل بالكامل دون اتصال بالإنترنت ولا يطلب أو يُخزّن أو يُرسل أي معلومات شخصية.
+**لا يجمع التطبيق أي بيانات شخصية بشكل مباشر.** لا يطلب التطبيق تسجيل دخول أو أي معلومات شخصية من المستخدم.
 
-### البيانات التي لا نجمعها
+قد يتم جمع بيانات تقنية مجهولة الهوية تلقائيًا من خلال خدمات الطرف الثالث (مذكورة أدناه) لتحسين أداء التطبيق وإصلاح الأعطال.
+
+### البيانات التي لا نجمعها بشكل مباشر
 
 - الاسم أو البريد الإلكتروني أو أي بيانات تعريفية
-- الموقع الجغرافي
-- معرّف الجهاز أو بصمة الجهاز
-- بيانات الاستخدام أو التحليلات
-- سجل التصفح أو البحث
+- الموقع الجغرافي الدقيق
+- جهات الاتصال أو الصور أو الملفات
+- محتوى الرسائل أو المحادثات
 
 ## التخزين المحلي
 
@@ -47,17 +48,39 @@
 
 ## الاتصال بالإنترنت
 
-التطبيق **لا يتصل بالإنترنت** ولا يُرسل أي طلبات شبكة. جميع المحتويات (النصوص، الملفات الصوتية، الخطوط) مُضمّنة محليًا في التطبيق.
+يتصل التطبيق بالإنترنت فقط لإرسال بيانات التحليلات وتقارير الأعطال إلى خدمات Firebase. جميع المحتويات الأساسية (النصوص، الملفات الصوتية، الخطوط) مُضمّنة محليًا في التطبيق ولا تتطلب اتصالًا بالإنترنت.
 
 ## خدمات الطرف الثالث
 
-التطبيق **لا يستخدم** أي خدمات تحليلات أو تتبع أو إعلانات من طرف ثالث. لا يوجد:
+يستخدم التطبيق الخدمات التالية لتحسين الأداء وتحليل الأعطال:
 
-- Firebase Analytics
-- Google Analytics
-- أدوات تتبع الأعطال (Crashlytics، Sentry)
+### Google Analytics for Firebase
+يُستخدم لجمع بيانات استخدام مجهولة الهوية مثل:
+- عدد مرات فتح التطبيق
+- الشاشات الأكثر استخدامًا
+- نوع الجهاز وإصدار نظام التشغيل
+- الدولة واللغة (بدون موقع دقيق)
+
+هذه البيانات مجمّعة وغير مرتبطة بهويتك الشخصية.
+
+### Firebase Crashlytics
+يُستخدم لتسجيل تقارير الأعطال تلقائيًا، وتشمل:
+- نوع الخطأ وموضعه في الكود
+- نوع الجهاز وإصدار نظام التشغيل
+- حالة التطبيق وقت حدوث العطل
+
+لا تتضمن تقارير الأعطال أي بيانات شخصية.
+
+### Google Play Console
+توفر Google بيانات تحليلية عامة عن التطبيق من خلال Google Play Console، مثل عدد التحميلات والتقييمات ونوعية الأجهزة المستخدمة.
+
+لمزيد من المعلومات حول سياسة خصوصية Google:
+https://policies.google.com/privacy
+
+التطبيق **لا يحتوي** على:
 - شبكات إعلانية
 - أدوات إعادة الاستهداف
+- مشاركة بيانات مع أطراف ثالثة لأغراض تسويقية
 
 ## أمان البيانات
 
@@ -91,15 +114,16 @@
 
 ## Data Collection
 
-**This app does not collect any personal data.** The app operates entirely offline and does not request, store, or transmit any personal information.
+**This app does not directly collect any personal data.** The app does not require login or any personal information from the user.
 
-### Data We Do NOT Collect
+Anonymous technical data may be automatically collected through third-party services (listed below) to improve app performance and fix crashes.
+
+### Data We Do NOT Directly Collect
 
 - Name, email, or any identifying information
-- Location data
-- Device identifiers or fingerprinting
-- Usage analytics or behavioral data
-- Browsing or search history
+- Precise location data
+- Contacts, photos, or files
+- Message or conversation content
 
 ## Local Storage
 
@@ -128,17 +152,39 @@ The app **does not request** access to the internet, camera, location, contacts,
 
 ## Internet Access
 
-The app **does not connect to the internet** and makes no network requests. All content (text, audio files, fonts) is bundled locally within the app.
+The app connects to the internet only to send analytics data and crash reports to Firebase services. All core content (text, audio files, fonts) is bundled locally within the app and does not require an internet connection.
 
 ## Third-Party Services
 
-The app **does not use** any third-party analytics, tracking, or advertising services. There is no:
+The app uses the following services to improve performance and analyze crashes:
 
-- Firebase Analytics
-- Google Analytics
-- Crash reporting tools (Crashlytics, Sentry)
+### Google Analytics for Firebase
+Used to collect anonymous usage data such as:
+- App open count
+- Most used screens
+- Device type and OS version
+- Country and language (without precise location)
+
+This data is aggregated and not linked to your personal identity.
+
+### Firebase Crashlytics
+Used to automatically log crash reports, including:
+- Error type and location in code
+- Device type and OS version
+- App state at the time of the crash
+
+Crash reports do not include any personal data.
+
+### Google Play Console
+Google provides general app analytics through Google Play Console, such as download counts, ratings, and device types.
+
+For more information about Google's privacy policy:
+https://policies.google.com/privacy
+
+The app **does not** contain:
 - Advertising networks
 - Retargeting tools
+- Data sharing with third parties for marketing purposes
 
 ## Data Security
 
